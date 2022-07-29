@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Connection</title>
+    <link rel = "icon" type = "image/png" href = "assets/img/unix.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Centered-Icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/untitled-1.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+<style>
+    .loader {
+      display: none;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+    
+    .loading {
+      border: 2px solid #ccc;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border-top-color: #1ecd97;
+      border-left-color: #1ecd97;
+      animation: spin 1s infinite ease-in;
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+    
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    div.container {
+      overflow: auto;
+      white-space: nowrap;
+    }
+    
+    div.container div.column {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+    
+    div.scrollmenu div.column:hover {
+      background-color: #777;
+    }
+</style>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: var(--bs-dark);">
+            <div class="container-fluid d-flex flex-column p-0"><a href="index.html" class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><i class="fas fa-server"></i>
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Unix</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="alert.html"><i class="fas fa-exclamation-triangle"></i><span>Alert&nbsp;</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="connection.html"><i class="fas fa-wifi"></i><span>Connection</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="--bs-body-bg: #ffffff;background: url(&quot;assets/img/Blue-and-purple-abstract-background_1600x900.jpg&quot;), var(--bs-indigo);filter: brightness(109%) contrast(87%);">
+                    <div class="container-fluid"><a href="index.html" class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"><i class="fas fa-server" style="color: var(--bs-light);"></i>
+                            <div class="sidebar-brand-icon rotate-n-15"></div>
+                            <div class="sidebar-brand-text mx-3"><span style="font-weight: bold;font-size: 20px;color: var(--bs-light);">UNIX</span></div>
+                        </a></div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-dark mb-4">Check Connection to Copart EAI (Dynatrance Based)</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="width: 770.725px;">
+                            <div class="card shadow mb-3" style="width: 442.725px;">
+                                <div class="card-header py-3" style="height: 45px;margin-top: 0px;letter-spacing: 0px;line-height: 14px;width: 439.725px;"><label class="form-label" for="username" style="color: var(--bs-purple);line-height: 24px;"><strong>Check Connection to Copart EAI (Dynatrance Based)</strong></label></div>
+                                <div class="card-body" style="width: 428.725px;height: 400px">
+                                    <form name="myform" id="myform" onsubmit="return formSubmit(this);">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3"><label class="form-label" for="first_name"><strong>Source</strong><br></label><select class="form-select" style="width: 396.725px;">
+                                                        <optgroup label="Select Source">
+                                                            <option value="12" selected="">KP2EAIAPIGW01</option>
+                                                            <option value="13">KP2EAIAPIGW02</option>
+                                                            <option value="14">KP1EAIAPIGW01</option>
+                                                            <option value="15">KP1EAIAPIGW02</option>
+                                                            <option value="16">KP3EAIAPIGW01</option>
+                                                            <option value="17">KP3EAIAPIGW02</option>
+                                                            <option value="18">bca2gwesb01</option>
+                                                            <option value="19">bca2gwesb02</option>
+                                                            <option value="20">bca1gwesb01</option>
+                                                            <option value="21">bca1gwesb02</option>
+                                                        </optgroup>
+                                                    </select>
+                                                    <div id="floating-label-1" class="form-floating mb-3"></div>
+                                                </div>
+                                                <div class="mb-3"><label class="form-label" for="username"><strong>IP Copart</strong><br></label><input class="form-control" type="text" id="ip" placeholder="Enter IP Copart for Connection Check" name="ip" required></div>
+                                                <div class="mb-3"><label class="form-label" for="username"><strong>Port Copart</strong></label><input class="form-control" type="text" id="port" placeholder="Enter Port Copart for Connection Check" name="port" required></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit" style="color: var(--bs-body-bg);background: var(--bs-purple);">Submit</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-3" style="width: 728.875px;">
+                                <div class="card-header py-3" style="height: 45px;width: 726.875px;"><label class="form-label" for="username" style="color: var(--bs-purple);line-height: 24px;"><strong>Hasil Pengecheckan Connection</strong></label></div>
+                                <div class="card-body" style="height: 400px">
+                                    <form>
+                                        <div class="mb-3">
+                                            <div class="loader">
+                                                <div class="loading">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer" style="background: var(--bs-body-bg);">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © UNIX 2022</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+<script type="text/javascript">
+    function spinner() {
+        var empt = document.forms["myform"]["ip"].value;
+        var kosong = document.forms["myform"]["port"].value;
+        if(empt==""&&kosong==""){
+            return false
+        }
+        else{
+            document.getElementsByClassName("loader")[0].style.display = "block";
+            return true
+        }
+    }
+</script>
+</html>
